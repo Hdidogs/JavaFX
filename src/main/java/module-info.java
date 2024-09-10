@@ -9,6 +9,8 @@ module appli.todolistfx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens appli.todolistfx to javafx.fxml;
-    exports appli.todolistfx;
+    opens appli to javafx.fxml;
+    exports appli;
+    exports appli.accueil;
+    opens appli.accueil to javafx.fxml;
 }

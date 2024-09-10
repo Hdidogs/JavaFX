@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="appli.accueil.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="Bienvenu !">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label text="Votre Email :" />
+   <TextField />
+   <Label text="Votre mot de passe :" />
+   <PasswordField />
+
+    <Label fx:id="erreurText" text="Label pour erreur" textFill="RED" />
+   <Button onAction="#onConnexionButtonClick" mnemonicParsing="false" text="Connexion" />
+   <Button onAction="#onMDPButtonClick" mnemonicParsing="false" text="Mot de passe oublié" />
+   <Button onAction="#onInscriptionButtonClick" mnemonicParsing="false" text="Inscription" />
+</VBox>
