@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 
 public class LoginController {
@@ -23,7 +24,7 @@ public class LoginController {
     }
 
     @FXML
-    protected void onInscriptionButtonClick() {
+    protected void onInscriptionButtonClick() throws IOException {
         StartApplication.changeScene("accueil/inscriptionview.fxml");
     }
 

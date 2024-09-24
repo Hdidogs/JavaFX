@@ -24,15 +24,11 @@ public class StartApplication extends Application {
         launch();
     }
 
-    public static void changeScene(String fxml) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(fxml));
-            Scene scene = new Scene(fxmlLoader.load(), 320, 640);
-            main.setTitle("Hello!");
-            main.setScene(scene);
-            main.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void changeScene(String nomDuFichierFxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(nomDuFichierFxml));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 640);
+        main.setTitle("Hello!");
+        main.setScene(scene);
+        main.show();
     }
 }

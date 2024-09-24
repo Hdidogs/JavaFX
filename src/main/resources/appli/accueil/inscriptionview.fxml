@@ -14,17 +14,19 @@
             <Font size="18.0" />
         </font>
     </Label>
-   <Label text="Nom" />
-   <TextField />
-   <Label text="Prenom" />
-   <TextField />
+    <Label text="Nom" />
+    <TextField fx:id="nomField" />
+    <Label text="Prenom" />
+    <TextField fx:id="prenomField" />
     <Label text="Email" />
-    <TextField />
+    <TextField fx:id="emailField" />
     <Label text="Mot de passe" />
-    <PasswordField />
-   <Label text="Confirmation" />
-   <PasswordField />
+    <PasswordField fx:id="mdpField" />
+    <Label text="Confirmation" />
+    <PasswordField fx:id="mdpConfirmField" />
 
-    <Button mnemonicParsing="false" text="Inscription" />
-   <Button mnemonicParsing="false" text="Retour" />
+    <Label fx:id="errorLabel" text="" textFill="RED"/>
+
+    <Button onAction="#onInscriptionButtonClick" mnemonicParsing="false" text="Inscription" />
+    <Button onAction="#onConnexionButtonClick" mnemonicParsing="false" text="Retour" />
 </VBox>
