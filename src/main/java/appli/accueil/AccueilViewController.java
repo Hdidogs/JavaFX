@@ -32,7 +32,7 @@ public class AccueilViewController implements Initializable {
 
     @FXML
     protected void onAddListClick() throws IOException {
-        System.out.println("Ajouter une liste");
+        StartApplication.changeScene("accueil/addlisteview.fxml");
     }
 
     @Override
@@ -43,5 +43,9 @@ public class AccueilViewController implements Initializable {
             maColonne.setCellValueFactory(new PropertyValueFactory<>(colonnes[i][1]));
             tableauListe.getColumns().add(maColonne);
         }
+    }
+
+    public TableView<Liste> getTableauListe() {
+        return tableauListe;
     }
 }

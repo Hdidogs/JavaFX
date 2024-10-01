@@ -10,8 +10,8 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.AccueilViewController">
    <children>
       <TableView layoutX="166.0" layoutY="98.0" prefHeight="302.0" prefWidth="434.0" fx:id="tableauListe" />
-      <Button layoutX="40.0" layoutY="279.0" mnemonicParsing="false" text="Ajouter une liste" onAction="#onDeconnexionClick" />
-      <Button layoutX="40.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Les types" onAction="#onDeconnexionClick" />
+      <Button layoutX="40.0" layoutY="279.0" mnemonicParsing="false" text="Ajouter une liste" onAction="#onAddListClick" />
+      <Button layoutX="40.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Les types" onAction="#onTypeClick" />
       <Button layoutX="40.0" layoutY="347.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="Déconnexion" onAction="#onDeconnexionClick" />
       <Label layoutX="166.0" layoutY="70.0" text="Ensemble des listes créées :">
          <font>
