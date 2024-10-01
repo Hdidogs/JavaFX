@@ -25,7 +25,7 @@
     <Label text="Confirmation" />
     <PasswordField fx:id="mdpConfirmField" />
 
-    <Label fx:id="errorLabel" text="" textFill="RED"/>
+    <Label fx:id="errorLabel" text=" " textFill="RED"/>
 
     <Button onAction="#onInscriptionButtonClick" mnemonicParsing="false" text="Inscription" />
     <Button onAction="#onConnexionButtonClick" mnemonicParsing="false" text="Retour" />

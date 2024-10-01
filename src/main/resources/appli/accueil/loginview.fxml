@@ -15,11 +15,11 @@
       </font>
    </Label>
    <Label text="Votre Email :" />
-   <TextField />
+   <TextField fx:id="emailField" />
    <Label text="Votre mot de passe :" />
-   <PasswordField />
+   <PasswordField fx:id="passwordField" />
 
-    <Label fx:id="erreurText" text="Label pour erreur" textFill="RED" />
+    <Label fx:id="erreurText" text=" " textFill="RED" />
    <Button onAction="#onConnexionButtonClick" mnemonicParsing="false" text="Connexion" />
    <Button onAction="#onMDPButtonClick" mnemonicParsing="false" text="Mot de passe oublié" />
    <Button onAction="#onInscriptionButtonClick" mnemonicParsing="false" text="Inscription" />

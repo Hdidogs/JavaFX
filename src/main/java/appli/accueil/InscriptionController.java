@@ -46,7 +46,7 @@ public class InscriptionController {
 
         if (!email.isEmpty() && !nom.isEmpty() && !prenom.isEmpty() && !mdp.isEmpty() && !mdpConfirm.isEmpty()) {
             if (mdp.equals(mdpConfirm)) {
-                if (UtilisateurRepository.getUtilisateurParEmail(email) == null) {
+                if (UtilisateurRepository.getUtilisateurParEmail(email) != null) {
                     errorLabel.setTextFill(javafx.scene.paint.Color.RED);
                     errorLabel.setText("Cet email est déjà utilisé.");
                 } else {
