@@ -1,6 +1,6 @@
-package appli.repository;
+package repository;
 
-import appli.database.Database;
+import database.Database;
 import model.User;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 

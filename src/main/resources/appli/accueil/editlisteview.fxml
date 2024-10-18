@@ -5,19 +5,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="appli.accueil.ListeController">
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <Label text="Ajouter une liste !">
+   <Label text="Modifier la liste !">
       <font>
          <Font size="18.0" />
       </font>
    </Label>
-   <Label text="Nom de la liste :" />
+   <Label text="Nouveau nom de la liste :" />
    <TextField fx:id="listeField" />
 
     <Label fx:id="erreurText" text=" " textFill="RED" />
-   <Button onAction="#onAddListeClick" mnemonicParsing="false" text="Ajouter une liste" />
+   <Button onAction="#onModifierListeClick" mnemonicParsing="false" text="Modifier la liste" />
     <Button onAction="#onRetourClick" mnemonicParsing="false" text="Retour" />
 </VBox>
