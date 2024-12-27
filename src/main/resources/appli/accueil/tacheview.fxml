@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.accueil.TacheViewController">
+    <children>
+        <TableView fx:id="tableauTache" layoutX="166.0" layoutY="98.0" onMouseClicked="#onTacheSelection" prefHeight="302.0" prefWidth="434.0" />
+        <Button layoutX="40.0" layoutY="246.0" mnemonicParsing="false" onAction="#onSupprimerTacheClick" text="Supprimer la tâche" />
+        <Button layoutX="40.0" layoutY="279.0" mnemonicParsing="false" onAction="#onAddTacheClick" text="Ajouter une tâche" />
+        <Button layoutX="40.0" layoutY="306.0" mnemonicParsing="false" onAction="#onBackTacheClick" text="Retour" />
+        <Label layoutX="166.0" layoutY="70.0" text="Liste des tâches :">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="titre" contentDisplay="CENTER" layoutX="19.0" layoutY="21.0" prefHeight="40.0" prefWidth="567.0" text="Gestion des tâches" textAlignment="CENTER">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

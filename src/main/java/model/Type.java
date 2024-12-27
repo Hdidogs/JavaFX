@@ -34,4 +34,9 @@ public class Type {
     public void setCodeCouleur(String code_couleur) {
         this.codeCouleur = code_couleur;
     }
+
+    @Override
+    public String toString() {
+        return nom;
+    }
 }

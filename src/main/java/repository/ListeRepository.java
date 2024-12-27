@@ -41,7 +41,8 @@ public class ListeRepository {
         Database db = new Database();
         Connection cnx = db.getConnection();
 
-        PreparedStatement req = cnx.prepareStatement("SELECT id_liste, nom FROM liste");
+        PreparedStatement req = cnx.prepareStatement("SELECT id_liste, nom FROM liste INNER JOIN utilisateur_liste ON liste.id_liste = utilisateur_liste.ref_liste WHERE ref_utilisateur = ?");
+        req.setInt(1, UtilisateurConnecte.getInstance().getId());
         ResultSet rs = req.executeQuery();
 
         while (rs.next()) {

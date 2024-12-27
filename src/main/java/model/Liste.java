@@ -28,4 +28,9 @@ public class Liste {
     public void setIdListe(int idListe) {
         this.idListe = idListe;
     }
+
+    @Override
+    public String toString() {
+        return nom;
+    }
 }

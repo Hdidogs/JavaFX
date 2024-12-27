@@ -40,6 +40,11 @@ public class AccueilViewController implements Initializable {
     }
 
     @FXML
+    protected void onTacheClick() throws IOException {
+        StartApplication.changeScene("accueil/tacheview.fxml");
+    }
+
+    @FXML
     protected void onTypeClick() throws IOException {
         StartApplication.changeScene("accueil/typeview.fxml");
     }
