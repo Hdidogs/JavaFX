@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import model.User;
+import model.Utilisateur;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -50,7 +50,6 @@ public class InscriptionController {
                     errorLabel.setText("Cet email est déjà utilisé.");
                 } else {
                     if (UtilisateurRepository.inscription(nom, prenom, email, mdp)) {
-                        User user = new User(nom, prenom, email, mdp);
                         errorLabel.setTextFill(javafx.scene.paint.Color.GREEN);
                         errorLabel.setText("Inscription réussie.");
                         emailField.setText("");

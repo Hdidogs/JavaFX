@@ -16,7 +16,6 @@ public class StartApplication extends Application {
         main = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource("accueil/loginview.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1080, 760);
-        main.setTitle("Hello!");
         main.setScene(scene);
         main.show();
     }

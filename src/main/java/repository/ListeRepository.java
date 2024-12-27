@@ -2,6 +2,7 @@ package repository;
 
 import database.Database;
 import model.Liste;
+import model.UtilisateurConnecte;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,15 +16,25 @@ public class ListeRepository {
         Database db = new Database();
         Connection cnx = db.getConnection();
 
-        PreparedStatement req = cnx.prepareStatement("INSERT INTO liste (nom) VALUES (?)");
+        PreparedStatement req = cnx.prepareStatement("INSERT INTO liste (nom) VALUES (?)", PreparedStatement.RETURN_GENERATED_KEYS);
         req.setString(1, nom);
 
         if (req.executeUpdate() == 1) {
-            return new Liste(nom);
-        } else {
-            return null;
+            ResultSet generatedKeys = req.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                int id_liste = generatedKeys.getInt(1);
+
+                PreparedStatement reqRelation = cnx.prepareStatement("INSERT INTO utilisateur_liste (ref_liste, ref_utilisateur) VALUES (?, ?)");
+                reqRelation.setInt(1, id_liste);
+                reqRelation.setInt(2, UtilisateurConnecte.getInstance().getId());
+                reqRelation.executeUpdate();
+
+                return new Liste(nom, id_liste);
+            }
         }
+        return null;
     }
+
 
     public static List<Liste> getAllListes() throws SQLException {
         List<Liste> listes = new ArrayList<>();

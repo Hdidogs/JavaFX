@@ -1,16 +1,26 @@
 package model;
 
-public class User {
+public class Utilisateur {
+    private int id;
     private String nom;
     private String prenom;
     private String email;
     private String motDePasse;
 
-    public User(String nom, String prenom, String email, String motDePasse) {
+    public Utilisateur(int id, String nom, String prenom, String email, String motDePasse) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.motDePasse = motDePasse;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNom() {
